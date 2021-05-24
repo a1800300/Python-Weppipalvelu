@@ -5,10 +5,14 @@ Haaga-Helian kurssiin liittyvä repository.
 
 Koodi löytyy develop-haarasta.
 
+Flask-dokumentaatio: 
+https://flask.palletsprojects.com/en/1.0.x/ 
+
 ## Alustava aikataulu
 
 
 ### w21
+
 
 ##### ma Hei maailma! Järjestäytyminen. Yleiskuva. Linuxin pikakertaus. Hei Python! Hei Flask! Hei HTML!
 
@@ -23,6 +27,7 @@ Koodi löytyy develop-haarasta.
 
 
 ##### pe Käyttäjät ja kirjautuminen. Miniprojektien tehtävänanto.
+
 
 
 

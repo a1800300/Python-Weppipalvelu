@@ -10,8 +10,12 @@ def index():
 
 @app.route('/form')
 def form():
-	return render_template('form.html', methods=['GET','POST'])
+	return render_template('form.html', method='GET')
 
+
+@app.route('/post')
+def postform():
+	return render_template('postform.html', method='POST')
 
 @app.route('/foo')
 def foo():

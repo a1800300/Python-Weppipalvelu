@@ -1,7 +1,5 @@
 # Python-Weppipalvelu
 
-Haaga-Helian kurssiin Python weppipalvelu - ideasta tuotantoon (ICT8TN034-3001) liittyvä repository.
-
 
 Haaga-Helian kurssiin Python weppipalvelu - ideasta tuotantoon (ICT8TN034-3001) liittyvä repository.
 
@@ -38,7 +36,7 @@ Kurssin kotisivu: https://terokarvinen.com/2021/python-web-service-from-idea-to-
 
 #### ti Muotit ja lomakkeet 
 Muotit (templates). Lomakkeet (html forms) ja käyttäjän syötteet. GET ja POST.
-=======
+
 &nbsp;
 
 ## Alustava aikataulu
@@ -46,7 +44,7 @@ Muotit (templates). Lomakkeet (html forms) ja käyttäjän syötteet. GET ja POS
 
 
 &nbsp;
->>>>>>> feature
+
 
 ### w21
 

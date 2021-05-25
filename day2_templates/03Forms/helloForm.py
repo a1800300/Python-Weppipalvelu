@@ -8,14 +8,14 @@ def index():
 	return render_template('base.html')
 
 
-@app.route('/form')
+@app.route('/form', methods=[ "GET" , "POST" ])
 def form():
-	return render_template('form.html', method='GET')
+	return render_template('form.html')
 
 
-@app.route('/post')
+@app.route('/post', methods=[ "GET" , "POST" ])
 def postform():
-	return render_template('postform.html', method='POST')
+	return render_template('postform.html')
 
 @app.route('/foo')
 def foo():

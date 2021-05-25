@@ -1,7 +1,10 @@
 # Python-Weppipalvelu
 
+Haaga-Helian kurssiin Python weppipalvelu - ideasta tuotantoon (ICT8TN034-3001) liittyvä repository.
+
 
 Haaga-Helian kurssiin Python weppipalvelu - ideasta tuotantoon (ICT8TN034-3001) liittyvä repository.
+
 
 This is the repository including assigments and tasks for the Haaga-Helia course "Python weppipalvelu - ideasta tuotantoon (ICT8TN034-3001)"
 
@@ -11,6 +14,8 @@ Koodi löytyy develop-haarasta julkaisuun asti.
 
 Flask-dokumentaatio: 
 https://flask.palletsprojects.com/en/1.0.x/ 
+
+Kurssin kotisivu: https://terokarvinen.com/2021/python-web-service-from-idea-to-production/ 
 
 
 Kurssin kotisivu: https://terokarvinen.com/2021/python-web-service-from-idea-to-production/ 
@@ -33,13 +38,26 @@ Kurssin kotisivu: https://terokarvinen.com/2021/python-web-service-from-idea-to-
 
 #### ti Muotit ja lomakkeet 
 Muotit (templates). Lomakkeet (html forms) ja käyttäjän syötteet. GET ja POST.
+=======
+&nbsp;
 
+## Alustava aikataulu
+(Aikataulu lainattu: https://terokarvinen.com/2021/python-web-service-from-idea-to-production/#alustava-aikataulu )
+
+
+&nbsp;
+>>>>>>> feature
+
+### w21
 
 #### ke ORM Automaattiset lomakkeet ja tietokannat.
 
+#### ti Muotit ja lomakkeet 
+Muotit (templates). Lomakkeet (html forms) ja käyttäjän syötteet. GET ja POST.
 
 #### to Tuotantopalvelin. Apache2, mod_wsgi ja PostgreSQL. Pilven vuokraaminen.
 
+#### to Tuotantopalvelin. Apache2, mod_wsgi ja PostgreSQL. Pilven vuokraaminen.
 
 #### pe Käyttäjät ja kirjautuminen. Miniprojektien tehtävänanto.
 

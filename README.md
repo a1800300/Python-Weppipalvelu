@@ -1,41 +1,41 @@
 # Python-Weppipalvelu
 
+Haaga-Helian kurssiin Python weppipalvelu - ideasta tuotantoon (ICT8TN034-3001) liittyvä repository.
 
-Haaga-Helian kurssiin liittyvä repository.
+This is the repository including assigments and tasks for the Haaga-Helia course "Python weppipalvelu - ideasta tuotantoon (ICT8TN034-3001)"
 
-Koodi löytyy develop-haarasta.
+Koodi löytyy develop-haarasta julkaisuun asti.
 
-
-
+&nbsp;
 
 Flask-dokumentaatio: 
 https://flask.palletsprojects.com/en/1.0.x/ 
 
+Kurssin kotisivu: https://terokarvinen.com/2021/python-web-service-from-idea-to-production/ 
+
+&nbsp;
 
 ## Alustava aikataulu
+(Aikataulu lainattu: https://terokarvinen.com/2021/python-web-service-from-idea-to-production/#alustava-aikataulu )
 
+
+&nbsp;
 
 ### w21
 
+#### ma Hei maailma! Järjestäytyminen.
+ Yleiskuva. Linuxin pikakertaus. Hei Python! Hei Flask! Hei HTML!
 
-##### ma Hei maailma! Järjestäytyminen. Yleiskuva. Linuxin pikakertaus. Hei Python! Hei Flask! Hei HTML!
+#### ti Muotit ja lomakkeet 
+Muotit (templates). Lomakkeet (html forms) ja käyttäjän syötteet. GET ja POST.
 
+#### ke ORM Automaattiset lomakkeet ja tietokannat.
 
-##### ti Muotit ja lomakkeet Muotit (templates). Lomakkeet (html forms) ja käyttäjän syötteet. GET ja POST.
+#### to Tuotantopalvelin. Apache2, mod_wsgi ja PostgreSQL. Pilven vuokraaminen.
 
+#### pe Käyttäjät ja kirjautuminen. Miniprojektien tehtävänanto.
 
-##### ke ORM Automaattiset lomakkeet ja tietokannat.
-
-
-##### to Tuotantopalvelin. Apache2, mod_wsgi ja PostgreSQL. Pilven vuokraaminen.
-
-
-##### pe Käyttäjät ja kirjautuminen. Miniprojektien tehtävänanto.
-
-
-
-
-
+&nbsp;
 
 ### w22
 
@@ -45,7 +45,4 @@ https://flask.palletsprojects.com/en/1.0.x/
 
 #### ke Miniprojektien esittely
 
-Aikataulu on alustava ja muuttuu kurssin kuluessa.
-
-Kurssi päättyy kokonaan w22 keskiviikkona. Sen jälkeen ei voi eikä tarvitse palauttaa mitään.
 

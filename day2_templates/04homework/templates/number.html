@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	<meta charset="UTF-8" />
+		<title>This is somekind of guessing game</title>
+	</head>
+	<body>
+		<h3>See if random number is in numbers</h3>
+		<p>{{number}}</p>
+		{% for number in numbers %}
+		<p>Your number was {{ number }}<p>	
+		<p>{% endfor %}</p>
+		<p>The printing stopped because the loop is over</p>
+	</body>
+</html>

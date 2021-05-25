@@ -6,7 +6,8 @@ app= Flask(__name__)
 @app.route('/')
 def  index():
 
-	return render_template('base.html')
+	hats = ["lippis","pipo"]
+	return render_template('loopHTML.html' , hats=hats)
 
 
 if __name__ == '__main__':

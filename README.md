@@ -16,28 +16,9 @@ https://flask.palletsprojects.com/en/1.0.x/
 Kurssin kotisivu: https://terokarvinen.com/2021/python-web-service-from-idea-to-production/ 
 
 
-Kurssin kotisivu: https://terokarvinen.com/2021/python-web-service-from-idea-to-production/ 
-
 &nbsp;
 
-## Alustava aikataulu
-(Aikataulu lainattu: https://terokarvinen.com/2021/python-web-service-from-idea-to-production/#alustava-aikataulu )
 
-
-
-&nbsp;
-
-### w21
-
-
-#### ma Hei maailma! Järjestäytyminen.
- Yleiskuva. Linuxin pikakertaus. Hei Python! Hei Flask! Hei HTML!
-
-
-#### ti Muotit ja lomakkeet 
-Muotit (templates). Lomakkeet (html forms) ja käyttäjän syötteet. GET ja POST.
-
-&nbsp;
 
 ## Alustava aikataulu
 (Aikataulu lainattu: https://terokarvinen.com/2021/python-web-service-from-idea-to-production/#alustava-aikataulu )

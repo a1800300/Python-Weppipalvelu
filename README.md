@@ -48,14 +48,15 @@ Muotit (templates). Lomakkeet (html forms) ja käyttäjän syötteet. GET ja POS
 
 ### w21
 
-#### ke ORM Automaattiset lomakkeet ja tietokannat.
+#### ma Hei maailma! Järjestäytyminen. Yleiskuva. Linuxin pikakertaus. Hei Python! Hei Flask! Hei HTML!
 
 #### ti Muotit ja lomakkeet 
 Muotit (templates). Lomakkeet (html forms) ja käyttäjän syötteet. GET ja POST.
 
-#### to Tuotantopalvelin. Apache2, mod_wsgi ja PostgreSQL. Pilven vuokraaminen.
+#### ke ORM Automaattiset lomakkeet ja tietokannat.
 
 #### to Tuotantopalvelin. Apache2, mod_wsgi ja PostgreSQL. Pilven vuokraaminen.
+
 
 #### pe Käyttäjät ja kirjautuminen. Miniprojektien tehtävänanto.
 

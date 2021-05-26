@@ -1,0 +1,10 @@
+{% extends "base.html"%}
+
+	{%block content%}
+		<h1>CAT LIST</h1>
+		{% for cat in cats  %}
+		<table>{{ cat.name }} is
+		{{ cat.type }}</table>	
+		<p>{% endfor %}</p>
+	{%endblock content%}
+

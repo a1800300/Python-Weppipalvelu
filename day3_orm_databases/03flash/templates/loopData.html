@@ -1,0 +1,10 @@
+{% extends "base.html"%}
+
+	{%block content%}
+		<h1>COUNTRIES</h1>
+		{% for country in countries  %}
+		<p>{{ country.countryName }}<p>
+		<p>{{ country.population }}	
+		<p>{% endfor %}</p>
+	{%endblock content%}
+

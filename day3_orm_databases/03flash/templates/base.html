@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	<meta charset="UTF-8" />
+		<title>TITLE </title>
+	</head>
+	<body>
+		<h1>MESSAGES</h1>
+		<nav>
+			<a href="/msg">I want a message</a>
+		</nav>
+                {% if get_flashed_messages()  %}
+                <p>{% for message in get_flashed_messages() %}<p>
+                <p><b>{{ message }}</b></p>
+                <p>{% endfor %}</p>
+                <p>{% endif %}</p><br>
+
+		<h1>HELLO</h1>
+		{%block content%}
+		<p>this is body<p>
+		{%endblock content%}	
+	</body>
+</html>

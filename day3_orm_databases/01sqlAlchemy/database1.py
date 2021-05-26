@@ -13,7 +13,7 @@ class Countries(db.Model):
 def initMe():
 	db.create_all()
 	# Let's add some test data here
-	country =  Countries(countryName='Finland', population='5180000')
+	country =  Countries(countryName='Finland', population='5518000')
 	db.session.add(country)
 	db.session.commit()
 

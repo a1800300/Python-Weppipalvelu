@@ -1,0 +1,10 @@
+{% extends "index.html" %}
+
+{% block another %}
+	<title>NEW CHATS</title>
+	<h2>NEW MESSAGES</h2>
+	{% for chat in chat %}
+	<p>{{ chat.message }} <a href="{{chat.id}}/edit">Edit</a>
+	</p>
+	{% endfor %}
+{% endblock another %}

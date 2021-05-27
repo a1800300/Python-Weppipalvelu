@@ -1,0 +1,23 @@
+{% if not title %}
+{% set title= "Customer list"%}
+{% endif %}
+
+<!doctype html>
+<html lang=en>
+	<head>
+	<title>{{title}}</title>
+	<meta charset="utf-8">
+	<meta name =viewport content="width-device-width, initial-scale=1"><!--m --!>
+	</head>
+	<body>
+	<a href="/">Customers</a><br>
+	<a href="/add-customer">Add new customer</a><br>
+	{% block content %}
+	{% endblock content %}
+	<p>
+	{% block another %}
+	{% endblock another %}
+	</p>
+	</body>
+
+</html>

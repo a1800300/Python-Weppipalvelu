@@ -1,0 +1,17 @@
+{% set title = "CUSTOMERS" %}
+{% extends "index.html" %}
+
+{% block content %}
+	<form method=POST>
+	{% for field in form %}
+	<p>
+	{% if not field.flags.hidden %}
+		{{field.label}}<br>
+	{% endif %}
+		{{field}}
+	</p>
+	{% endfor %}
+		<input type=submit><br><br>
+
+{% endblock content %}
+

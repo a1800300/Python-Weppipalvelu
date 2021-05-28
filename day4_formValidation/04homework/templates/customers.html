@@ -1,16 +1,15 @@
 {% extends "index.html" %}
 
-{% block another %}
-	<title>CUSTOMER PAGE</title>
+{% block content %}
 	<h2>YOUR CUSTOMERS</h2>
 	{% for customer in customers %}
-		<p>{{ customer.company }}
-		{{ customer.contact_person }}
-		{{ customer.phone }}
-		{{ customer.email }}
-		 
+		<p>
+		{{customer.company}}
+		{{customer.phone}}
+		{{customer.email}}
+		{{customer.contact_person}} -
 		<a href="/{{customer.id}}/edit">Edit</a> -
 		<a href="/{{customer.id}}/delete">Delete</a>
 		</p>
 	{% endfor %}
-{% endblock another %}
+{% endblock content %}

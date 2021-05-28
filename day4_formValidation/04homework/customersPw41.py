@@ -24,16 +24,18 @@ def initCustDb():
 	customer = Customers(company="Yritys Oy", phone="0501232", email="a@mail.fi", contact_person= "Janne Jannela")
 	db.session.add(customer)
 
-	customer = Customers(company="Järjestö RY", phone="0345122", email="y@jarjesto.fi", contact_person="Tiina Järjestöläinen")
+	customer = Customers(company="Järjestö RY", phone="0345122",
+	 email="y@jarjesto.fi", contact_person="Tiina Järjestöläinen")
 	db.session.add(customer)
 
 	# commit adding test data
 	db.session.commit()
+	print(Customers())
 
 @app.route('/')
 def index():
-	customer = Customers.query.all()
-	return render_template("customers.html", customer=customer)
+	customers = Customers.query.all()
+	return render_template("customers.html", customers=customers)
 
 #update a row in table
 @app.route('/<int:id>/edit', methods=[ "GET" , "POST" ])

@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+	{% for recipe in recipes %}
+	<table>
+	<h3>{{ recipe.name }}</h3>
+	<a href="/{{recipe.id}}/edit">
+	{{ recipe.category }}</a>
+	{{recipe.level}} 
+	<a href="/{{recipe.id}}/delete">Delete</a>
+	</table>	
+	<br>
+	{% endfor%}
+	
+{% endblock content %}

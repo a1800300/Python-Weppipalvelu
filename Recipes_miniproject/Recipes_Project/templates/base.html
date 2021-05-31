@@ -1,0 +1,21 @@
+{% if not title %}
+	{% set title="Welcome to RecipeGenerator" %}
+{% endif %}
+
+<!DOCTYPE html>
+<html lang=en>
+	<head>
+	 <title>{{ title }}</title>
+	<meta charset="UTF-8">
+	<meta name=viewport content="width-device-width, initial_scale=1">
+	</head>
+	<nav>
+	<a href="/">Home</a> - 
+	<a href="/new">Add new recipe</a>
+	</nav>
+	<body>
+	 <h1>{{ title }}</h1>
+	{% block content %}
+	{% endblock content %}
+	</body>
+</html>

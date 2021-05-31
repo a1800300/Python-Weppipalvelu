@@ -5,6 +5,7 @@ from wtforms.ext.sqlalchemy.orm import model_form #m
 
 app = Flask(__name__)
 app.secret_key="oob4eiphieKiQu8eengoojae6tohd2"
+app.config["SQLALCHEMY_DATABASE_URI"] = 'postgresql:///sofia'
 db = SQLAlchemy(app)
 
 class Customers(db.Model):

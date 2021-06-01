@@ -2,13 +2,13 @@
 
 {% block content %}
 	{% for recipe in recipes %}
-	<table>
 	<h3>{{ recipe.name }}</h3>
-	<a href="/recipes/{{recipe.id}}/edit">
-	{{ recipe.category }}</a>
-	{{recipe.level}} 
+	<p>
+	Category: {{ recipe.category }} -
+	Level: {{recipe.level}} - 
+	<a href="/recipes/{{recipe.id}}/edit">Edit</a> -
 	<a href="/recipes/{{recipe.id}}/delete">Delete</a>
-	</table>	
+	</p>	
 	<br>
 	{% endfor%}
 	

@@ -2,15 +2,19 @@
 
 {% block content %}
 
-	<form method=POST>
+<form method=POST>
 	{% for field in form %}
-	{% if not field.flags.hidden %}
-		{{ field.label }}
-	{% endif %}
+	<p>
+		{% if not field.flags.hidden %}
+			{{ field.label }}<br>
+			{% for fieldError in field.errors %}
+				<b>{{ fieldError }}</b>
+		{% endif %}
 		{{ field }}<br>
+	</p>
 	{% endfor %}<br>
 	<input type=submit>
-	</form>
+</form>
 	
 {% endblock content %}
 	

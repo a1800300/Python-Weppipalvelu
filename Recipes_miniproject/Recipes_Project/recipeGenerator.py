@@ -10,6 +10,7 @@ from wtforms import StringField, PasswordField, validators
 app = Flask(__name__)
 app.config["SQLALCHEMY_DATABASE_URI"]="postgres:///sofia"
 db =  SQLAlchemy(app)
+
 app.secret_key = "ooshouquoh2Ree8Ohphaosai4phoh5"
 
 class Recipes(db.Model): #m
@@ -78,23 +79,27 @@ def loginView():
 
 	return render_template("login.html", form=form)
 
-
 @app.route("/user/register", methods=["GET","POST"])
 def registerView():
 	form = RegisterForm()
+	user = User()
 
 	if form.validate_on_submit():
 		if form.key.data!="sofia":
 			flash("Wrong key")
 			return redirect("user/register")
-		user = User()
+		if User.query.filter_by(email=user.email).first():
+			return redirect("/user/register")
+			flash("Email is already in use, please try another email.")
+
 		user.email = form.email.data
 		user.setPassword(form.password.data)
 		db.session.add(user)
 		db.session.commit()
-
-		flash("Registration ok, pls login")
+		flash("Registration completed, you can now login!")
 		return redirect("/user/login")
+		
+			#user.email = form.email.data
 
 	return render_template("register.html", form=form)
 
@@ -112,47 +117,62 @@ def initDb():
 	recipe = Recipes(name = "Fish and chips", category="Dinner", level="Easy")
 	db.session.add(recipe)
 
-	user = User(email="sofia2@example.com")
-	user.setPassword("keLLo123")
-	db.session.add(user)
+	if not User.query.filter_by(email="sofia@example.com").first():
+		user = User(email="sofia2@example.com")
+		user.setPassword("keLLo123")
+		db.session.add(user)
+
 	db.session.commit()
 
-@app.route('/', methods =["GET","POST"])
-def index():
+@app.route('/recipes/home', methods =["GET","POST"])
+def homeView():
+	loginRequired()
 	recipes = Recipes.query.all()
 	return render_template('home.html', recipes=recipes )
 
-@app.route('/<int:id>/edit', methods =["GET","POST"])
-@app.route('/new', methods =["GET","POST"])
+@app.route('/recipes/<int:id>/edit', methods =["GET","POST"])
+@app.route('/recipes/new', methods =["GET","POST"])
 def newRecipe(id=None):
-	recipe = Recipes()
-	if id:
-		book = Books.query.get_or_404(id)
+	loginRequired()
 
-	form = RecipeForm()
+	if id:
+		recipe = Recipes.query.get_or_404(id)
+	else:
+		recipe = Recipes()
+	form = RecipeForm(obj=recipe)
+
 	if form.validate_on_submit():
 		form.populate_obj(recipe)
+		
 		db.session.add(recipe)
 		db.session.commit()
 
-		flash("Recipe added!")
-		return redirect("/")
+		flash("Recipe updated, sounds good!")
+		return redirect("/recipes/home")
 
 	return render_template('new.html', form=form)
 
-@app.route('/home', methods =["GET","POST"])
+@app.route('/', methods =["GET","POST"])
 def home():
-	recipes =  Recipes.query.all()
-	return render_template('home.html', recipes=recipes)
+	return render_template('index.html')
 
-@app.route('/<int:id>/delete')
+@app.route('/recipes/<int:id>/delete')
 def deleteRecipe(id):
+	loginRequired()
 	recipe = Recipes.query.get_or_404(id)
 	db.session.delete(recipe)
 	db.session.commit()
 
-	flash("Deleted")
-	return redirect("/")
+	flash("Recipe deleted")
+	return redirect("/recipes/home")
+
+#@app.errorhandler(404)
+#def custom404(e):
+#	return render_template("error_404.html")
+
+#@app.errorhander(403)
+#def custom403(e):
+#	return redirect("/user/login")
 
 if __name__=="__main__":
 	app.run()

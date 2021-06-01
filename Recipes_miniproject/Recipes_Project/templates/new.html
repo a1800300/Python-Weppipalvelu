@@ -9,6 +9,7 @@
 			{{ field.label }}<br>
 			{% for fieldError in field.errors %}
 				<b>{{ fieldError }}</b>
+			{% endfor %}
 		{% endif %}
 		{{ field }}<br>
 	</p>

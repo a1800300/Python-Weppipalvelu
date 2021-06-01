@@ -70,12 +70,12 @@ def loginView():
 			return redirect("/user/login")
 
 		if not user.checkPassword(password):
-			flash("Bad username or password")
+			flash("Wrong username or password, please try again!")
 			return redirect("/user/login")
 
 		session["uid"] = user.id
-		flash("Login ok")
-		return redirect("/")
+		flash("Login ok, welcome!")
+		return redirect("/recipes/home")
 
 	return render_template("login.html", form=form)
 
@@ -152,6 +152,7 @@ def newRecipe(id=None):
 
 	return render_template('new.html', form=form)
 
+# landing page
 @app.route('/', methods =["GET","POST"])
 def home():
 	return render_template('index.html')
@@ -166,13 +167,18 @@ def deleteRecipe(id):
 	flash("Recipe deleted")
 	return redirect("/recipes/home")
 
-#@app.errorhandler(404)
-#def custom404(e):
-#	return render_template("error_404.html")
+# error handlers
+@app.errorhandler(404)
+def custom404(e):
+	return render_template("error404.html")
 
-#@app.errorhander(403)
-#def custom403(e):
-#	return redirect("/user/login")
+@app.errorhandler(403)
+def custom403(e):
+	return redirect("/user/login")
+
+@app.errorhandler(500)
+def custom500(e):
+	return render_template("error500.html")
 
 if __name__=="__main__":
 	app.run()

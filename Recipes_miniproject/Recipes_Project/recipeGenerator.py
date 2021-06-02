@@ -1,8 +1,9 @@
 from flask import Flask,render_template, redirect, flash, session, abort
 from flask_sqlalchemy import SQLAlchemy
+from sqlalchemy.sql import func
 from flask_wtf import FlaskForm #m
 from wtforms.ext.sqlalchemy.orm import model_form #m
-
+import random
 #users
 from werkzeug.security import generate_password_hash, check_password_hash
 from wtforms import StringField, PasswordField, validators
@@ -18,6 +19,7 @@ class Recipes(db.Model): #m
 	name = db.Column(db.String(255), nullable=False)
 	category = db.Column(db.String, nullable=False)
 	level = db.Column(db.String, nullable=True)
+	instructions = db.Column(db.String, nullable=True)
 
 RecipeForm = model_form(Recipes, base_class=FlaskForm, db_session=db.session)
 
@@ -114,13 +116,13 @@ def logoutUser():
 def initDb():
 	db.create_all()
 
-	recipe = Recipes(name = "Fish and chips", category="Dinner", level="Easy")
+	recipe = Recipes(name = "Fish and chips", category="Dinner", level="Easy", instructions="http://www.allrecipes.com/recipe/16580/classic-fish-and-chips/")
 	db.session.add(recipe)
 
-	if not User.query.filter_by(email="sofia@example.com").first():
-		user = User(email="sofia2@example.com")
-		user.setPassword("keLLo123")
-		db.session.add(user)
+#	if not User.query.filter_by(email="sofia@example.com").first():
+#		user = User(email="sofia@example.com")
+#		user.setPassword("")
+#		db.session.add(user)
 
 	db.session.commit()
 
@@ -166,6 +168,17 @@ def deleteRecipe(id):
 
 	flash("Recipe deleted")
 	return redirect("/recipes/home")
+
+#generator ( not working )
+#@app.route('/recipes/generate', methods =["GET","POST"])
+#def generateR():
+#	loginRequired()
+#	query = db.session.query(Recipes)
+#	rowCount = int(query.count())
+#	recipes = query.offset(int(rowCount*random.random())).first()
+#	print(recipes)
+#	return("Mo")
+#	return render_template("random.html", recipes=recipes)
 
 # error handlers
 @app.errorhandler(404)

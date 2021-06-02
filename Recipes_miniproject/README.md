@@ -2,8 +2,16 @@
 
 ## RecipeCollector is a application where you and other users can collect and save favourite recipes.
 
+&nbsp;
+
+### Link to application:
+### http://161.35.216.162 
+
+&nbsp;
 
 This is a web programming project done for the Haaga-Helia - course <em>Python weppipalvelu - ideasta tuotantoon (ICT8TN034-3001).</em>
+
+&nbsp;
 
 ![Screenshot](https://github.com/a1800300/Python-Weppipalvelu/blob/develop/Recipes_miniproject/Recipes_Project/Welcome%20to%20RecipeCollector.png)
 

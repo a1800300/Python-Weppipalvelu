@@ -28,4 +28,4 @@ This is a web programming project done for the Haaga-Helia - course <em>Python w
 
 - The application is licensed under <em>GNU General Public License 2</em> https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 
-- The /Recipes_Project/static/css/main.css-file is downloaded from [Theme Wagon] (https://themewagon.com/themes/free-bootstrap-4-html5-cooking-website-template-tasty-recipes/?fbclid=IwAR2HBlTVm4dtI11RQ_eJlrjByTsslLkbC9Lrt7jr5wWyJ6SfJxj95g6-_ZY) 
+- The /Recipes_Project/static/css/main.css-file is downloaded from [Theme Wagon](https://themewagon.com/themes/free-bootstrap-4-html5-cooking-website-template-tasty-recipes/?fbclid=IwAR2HBlTVm4dtI11RQ_eJlrjByTsslLkbC9Lrt7jr5wWyJ6SfJxj95g6-_ZY) 
